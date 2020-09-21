@@ -1,0 +1,170 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.main {
+width: 100%;
+height: 100%;
+background-color: white;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+}
+
+.carlacontainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 0.5fr;
+    grid-template-areas: 
+    "name name name image"
+    "text text text text"
+    "button1 button1 button2 button2";
+    margin: 10px;
+    width: 400px;
+    height: 300px;
+    max-height: auto;
+    border-radius: 10px;
+    padding: 20px;
+    border: 2px solid black
+}
+
+.carlacontainer h1 {
+    grid-column: 2fr;
+    grid-area: name;
+}
+
+.carlacontainer span {
+    font-size: 0.6em;
+    color: #a2a2a2;
+}
+
+.carlacontainer p {
+    grid-area: text;
+    font-size: 1.4em;
+}
+
+.carlacontainer img {
+    background-color: black;
+    width: 100px;
+    height: 100px;
+    grid-area: image;
+    border-radius: 10px;
+    margin-left: auto
+}
+
+.marijncontainer {
+    display: flex;
+    max-height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 0.5fr;
+    grid-template-areas: 
+    "name name name image"
+    "text text text text"
+    "button1 button1 button2 button2";
+    margin: 10px;
+    width: 400px;
+    height: 300px;
+    max-height: auto;
+    border-radius: 10px;
+    padding: 20px;
+    border: 2px solid black
+}
+
+.marijncontainer h1 {
+    grid-column: 2fr;
+    grid-area: name;
+}
+
+
+
+.marijncontainer .new {
+    font-size: 0.6em;
+    color: #a2a2a2;
+}
+
+.marijncontainer .bold {
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.marijncontainer p {
+    grid-area: text;
+    font-size: 1.4em;
+}
+
+.marijncontainer img {
+    background-color: black;
+    width: 100px;
+    height: 100px;
+    grid-area: image;
+    border-radius: 10px;
+    margin-left: auto
+}
+
+.approve {
+    margin: 10px;
+    padding: 20px;
+    outline: none;
+    text-decoration: none;
+    cursor: pointer;
+    grid-area: button1;
+    color: lightgreen;
+    font-weight: bold;
+    font-size: 1.5em;
+    border-radius: 10px;
+    border: 2px solid lightgreen
+}
+
+.decline {
+    margin: 10px;
+    padding: 20px;
+    outline: none;
+    text-decoration: none;
+    cursor: pointer;
+    grid-area: button2;
+    color: red;
+    font-weight: bold;
+    font-size: 1.5em;
+    border-radius: 10px;
+    border: 2px solid red
+}
+
+
+
+
+/*Small screen/ laptops */
+@media screen and (min-width: 769px) {
+    .main {
+        flex-direction: row;
+    }
+    .marijncontainer {
+        height: 350px;
+    }
+    .carlacontainer {
+        height: 350px;
+    }
+   
+  }
+
+
+/*Desktop */
+@media screen and (min-width: 1025px) {
+    .marijncontainer {
+        height: auto;
+    }
+    .carlacontainer {
+        height: auto;
+    }
+
+    }
+
+
+    
+/*Large screen */
+@media screen and (min-width: 1201px) {
+  }
+  
